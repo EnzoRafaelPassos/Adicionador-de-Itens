@@ -28,6 +28,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🖼 Projeto
 
-O site FocusTimer é um site onde o usuario utiliza como timer, sendo o botão + par adicionar 5 minutos e o botão - para subtrair, também podemos ver 4 tipo de botões onde toca um som referente ao icone exibido no botão como Floresta, Chuva, barulho de pessoas conversando em uma cafeteira e barulho de Lareira.
+Criei um mini projeto onde o usuário pode adicionar itens digitando no input. Sempre que ele insere um texto e confirma a ação, o item é adicionado à lista de forma dinâmica. Além disso, cada item criado possui um ícone de lixeira, permitindo que o usuário o remova facilmente com um clique.
 
 - [Visite o projeto online](https://enzorafaelpassos.github.io/Adicionador-de-Itens/)
