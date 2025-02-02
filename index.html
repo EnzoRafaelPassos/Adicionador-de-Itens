@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" defer src="index.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <title>Add Item</title>
+</head>
+
+<body>
+    <div id="app">
+        <span class="error">Escreva o item primeiro e em seguida clica em "Adicionar item" para ser adicionado em "Itens Adicionados"</span>
+        <h1 class="title">Adicionar itens para compras</h1>
+        <div id="input-wrapper">
+            <input type="text" name="inputProduct" id="inputProduct" placeholder="Adicione um novo item">
+            <input type="button" id="btnAddItem" value="Adicionar Item">
+        </div>
+
+        <h2 class="title">Itens Adicionados:</h2>
+        <ul id="list">
+           <div class="removed"><i class="ph ph-warning-circle"></i>
+            <span class="span-removed">O item foi removido da lista</span>
+            <button class="ph ph-x"></button>
+           </div>
+        </ul>
+    </div>
+</body>
+
+</html>

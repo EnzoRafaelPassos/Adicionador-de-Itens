@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --btn-color:hsl(0, 94%, 54%);
+    --bg-color: #292424;
+    --txt-color-light: #ffffff;
+    --bg-removed: #a00000;
+    --box-color: #bfb2b2;
+}
+
+
+
+body {
+    background-color: var(--bg-color);
+}
+
+#app {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5.0rem;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5.5vw, 4rem);
+}
+
+#input-wrapper {
+    display: flex;
+    gap: .8rem;
+    margin-bottom: 5.0rem;
+   
+}
+
+#inputProduct {
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+    border: none;
+    padding: 1.0rem;
+}
+
+#btnAddItem {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1.0rem;
+    background: var(--btn-color);
+    color: var(--txt-color-light);
+    font-weight: bold;
+}
+
+.title {
+    margin-bottom: 5.0rem;
+    color: var(--txt-color-light);
+}
+
+
+#list {
+    overflow-y: scroll;
+   max-height: calc(10.0rem + 15vw);
+    padding: 1.0rem;
+}
+
+#list::-webkit-scrollbar {
+    width: .5rem;              
+  }
+
+  #list::-webkit-scrollbar-track {
+    background: var(--bg-color);        /* color of the tracking area */
+  }
+
+#list::-webkit-scrollbar-thumb {
+    background-color: var(--box-color);
+    border-radius: 10px;
+}
+
+
+
+#list li {
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.0rem 0;
+    padding: .8rem;
+    border-radius: 6px;
+    background-color: var(--box-color);
+    position: relative;
+}
+
+.item-wrapper .ph-trash {
+    position: absolute;
+    right: .8rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.removed {
+    padding: 1.0rem;
+    font-size: 1.4rem;
+    background-color: var(--bg-removed);
+    display: none;
+    align-items: center;
+    border-radius: 6px;
+    gap: .5rem;
+    position: relative;
+    margin: 1.0rem;
+    color: var(--txt-color-light);
+}
+
+.removed .ph-x {
+    position: absolute;
+    right: 1.0rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--txt-color-light);
+}
+
+
+.error {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1.0rem;
+    background-color: var(--btn-color);
+    color: var(--txt-color-light);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 2.5rem;
+    transform: translateY(-2.5rem);
+    animation: move 0.5s  ease-in-out;
+}
+
+
+@keyframes move {
+    0% {
+       top: -2.5rem;
+        opacity: 0;
+    }
+
+    100% {
+       top: 2.5rem;
+        opacity: 1;
+    }
+}
